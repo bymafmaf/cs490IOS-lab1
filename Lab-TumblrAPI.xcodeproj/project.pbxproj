@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		05A650158B7B89509172B983 /* Pods_Lab_TumblrAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F05680160C6A97BABBBBF1 /* Pods_Lab_TumblrAPI.framework */; };
 		D23188111E43F58600B60A25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23188101E43F58600B60A25 /* AppDelegate.swift */; };
-		D23188131E43F58600B60A25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23188121E43F58600B60A25 /* ViewController.swift */; };
 		D23188161E43F58600B60A25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23188141E43F58600B60A25 /* Main.storyboard */; };
 		D23188181E43F58600B60A25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D23188171E43F58600B60A25 /* Assets.xcassets */; };
 		D231881B1E43F58600B60A25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23188191E43F58600B60A25 /* LaunchScreen.storyboard */; };
+		D23188231E43F6B500B60A25 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23188221E43F6B500B60A25 /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +21,11 @@
 		76A33556D387C8E2AEC7B307 /* Pods-Lab-TumblrAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab-TumblrAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lab-TumblrAPI/Pods-Lab-TumblrAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		D231880D1E43F58600B60A25 /* Lab-TumblrAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lab-TumblrAPI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23188101E43F58600B60A25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D23188121E43F58600B60A25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D23188151E43F58600B60A25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D23188171E43F58600B60A25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D231881A1E43F58600B60A25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D231881C1E43F58600B60A25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D23188221E43F6B500B60A25 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				D23188101E43F58600B60A25 /* AppDelegate.swift */,
-				D23188121E43F58600B60A25 /* ViewController.swift */,
 				D23188141E43F58600B60A25 /* Main.storyboard */,
+				D23188221E43F6B500B60A25 /* PhotosViewController.swift */,
 				D23188171E43F58600B60A25 /* Assets.xcassets */,
 				D23188191E43F58600B60A25 /* LaunchScreen.storyboard */,
 				D231881C1E43F58600B60A25 /* Info.plist */,
@@ -211,8 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D23188131E43F58600B60A25 /* ViewController.swift in Sources */,
 				D23188111E43F58600B60A25 /* AppDelegate.swift in Sources */,
+				D23188231E43F6B500B60A25 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +376,7 @@
 				D23188211E43F58600B60A25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
