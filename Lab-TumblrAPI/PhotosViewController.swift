@@ -34,6 +34,12 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         } else {
             // photos is nil. Good thing we didn't try to unwrap it!
         }
+        
+        let username = onePost.value(forKey: "blog_name") as! String
+        let stringUrlForAvatar = "https://api.tumblr.com/v2/blog/" + username + "/avatar/512"
+        cell.profileImageView.setImageWith(URL(string: stringUrlForAvatar)!)
+        cell.usernameLabel.text = username
+        
 
         
         return cell
