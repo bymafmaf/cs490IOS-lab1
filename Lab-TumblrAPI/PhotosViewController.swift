@@ -7,13 +7,44 @@
 //
 
 import UIKit
+import AFNetworking
 
-class PhotosViewController: UIViewController {
+class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var posts: [NSDictionary] = []
     
+    @IBOutlet weak var mainTableView: UITableView!
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCellTableViewCell
+        
+        let onePost = posts[indexPath.row]
+        if let posts = onePost.value(forKeyPath: "photos") as? [NSDictionary] {
+            // photos is NOT nil, go ahead and access element 0 and run the code in the curly braces
+            let imageUrlString = posts[0].value(forKeyPath: "original_size.url") as? String
+            let imageUrl = URL(string: imageUrlString!)
+                // URL(string: imageUrlString!) is NOT nil, go ahead and unwrap it and assign it to imageUrl and run the code in the curly braces
+            cell.postImageView?.setImageWith(imageUrl!)
+            
+        } else {
+            // photos is nil. Good thing we didn't try to unwrap it!
+        }
+
+        
+        return cell
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mainTableView.delegate = self
+        mainTableView.dataSource = self
 
         // Do any additional setup after loading the view.
         let url = URL(string:"https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/posts/photo?api_key=Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV")
@@ -38,6 +69,7 @@ class PhotosViewController: UIViewController {
                         
                         // This is where you will store the returned array of posts in your posts property
                         self.posts = responseFieldDictionary["posts"] as! [NSDictionary]
+                        self.mainTableView.reloadData()
                     }
                 }
         });
