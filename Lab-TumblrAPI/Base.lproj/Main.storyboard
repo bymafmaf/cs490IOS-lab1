@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="ilG-nJ-Wic">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="BYZ-38-t0r">
+>>>>>>> parent of ba6690c... lab2 milestone 1 completed
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
+<<<<<<< HEAD
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
+=======
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+>>>>>>> parent of ba6690c... lab2 milestone 1 completed
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,11 +31,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="339" id="kfA-FH-4JZ" customClass="PostCellTableViewCell" customModule="Lab_TumblrAPI" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="339" id="kfA-FH-4JZ" customClass="PostCellTableViewCell" customModule="Lab_TumblrAPI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="339"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kfA-FH-4JZ" id="6Sb-wS-sY5">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="339"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="338"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="cMi-XN-4GM">
@@ -51,10 +59,6 @@
                                             <outlet property="postImageView" destination="Gg9-Cg-e6e" id="qTf-aU-YLI"/>
                                             <outlet property="profileImageView" destination="cMi-XN-4GM" id="ozy-xN-gna"/>
                                             <outlet property="usernameLabel" destination="UBb-2P-MJa" id="MeN-wk-6sK"/>
-                                            <segue destination="Q8d-3E-ebt" kind="push" id="zpQ-MJ-Fk6">
-                                                <segue key="commit" inheritsFrom="parent" id="Vey-LP-KeB"/>
-                                                <segue key="preview" inheritsFrom="commit" id="ctf-d4-BED"/>
-                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -62,54 +66,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MKa-bA-b6D"/>
                     <connections>
                         <outlet property="mainTableView" destination="icS-a7-iJ9" id="Nd5-DG-1Zc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="660.5" y="136.5"/>
-        </scene>
-        <!--Photo Details View Controller-->
-        <scene sceneID="1GV-pq-d8q">
-            <objects>
-                <viewController id="Q8d-3E-ebt" customClass="PhotoDetailsViewController" customModule="Lab_TumblrAPI" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uGD-Zh-OOd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="bPh-Fo-ABP">
-                                <rect key="frame" x="16" y="130" width="343" height="235"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1bH-u0-cK0"/>
-                    <connections>
-                        <outlet property="posterImageView" destination="bPh-Fo-ABP" id="Wbx-7g-6aE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kul-Tj-dia" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1130.5" y="114.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="zAX-AL-cYF">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ilG-nJ-Wic" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kIY-by-4QH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TLK-qY-pgm"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="smq-vL-UVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73.5" y="136.5"/>
         </scene>
@@ -119,7 +80,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="zpQ-MJ-Fk6"/>
-    </inferredMetricsTieBreakers>
 </document>

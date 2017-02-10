@@ -18,9 +18,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        tableView.deselectRow(at: indexPath, animated:true)
-    }
+    
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCellTableViewCell
@@ -125,22 +123,14 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        let destVC = segue.destination as! PhotoDetailsViewController
-        let chosenPost = posts[(mainTableView.indexPath(for: sender as! UITableViewCell)?.row)!]
-        
-        if let urlString = (chosenPost.value(forKeyPath: "photos") as? [NSDictionary])?[0].value(forKeyPath: "original_size.url") as? String {
-           destVC.imageUrl = urlString
-        }
-        
     }
- 
+    */
 
 }
